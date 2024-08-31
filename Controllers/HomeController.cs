@@ -13,7 +13,7 @@ public class HomeController : Controller
     {
 
     }
-
+    [HttpGet]
     public IActionResult Index(string searchString,string category)
     {
         var products = Repository.Products ;
@@ -21,7 +21,7 @@ public class HomeController : Controller
         if (!String.IsNullOrEmpty(searchString))
         {
             ViewBag.SearchString = searchString;
-            products = products.Where(p=>p.Name.ToLower().Contains(searchString.ToLower())).ToList();
+            products = products.Where(p=>p.Name!.ToLower().Contains(searchString.ToLower())).ToList();
         }
 
         if (!String.IsNullOrEmpty(category) && category != "0")
@@ -41,9 +41,42 @@ public class HomeController : Controller
         return View(model);
     }
 
-    public IActionResult Privacy()
+    [HttpGet]
+    public IActionResult Create()
     {
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(Product model,IFormFile imageFile)
+    {
+        var allowedExtentions = new[] {".jpg",".jpeg","png"};
+        var extentions = Path.GetExtension(imageFile.FileName);
+        var randomfilename  =string.Format($"{Guid.NewGuid().ToString()}{extentions}") ;
+        var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/img",randomfilename);
+
+        if (imageFile !=null)
+        {
+            if (!allowedExtentions.Contains(extentions))
+            {
+                ModelState.AddModelError("","Geçerli bir resim seçiniz");
+            }
+        };
+        if (ModelState.IsValid)
+        {
+            using (var stream = new FileStream(path,FileMode.Create))
+            {
+                await imageFile.CopyToAsync(stream);
+            }
+            model.Image = randomfilename;
+            model.ProductId = Repository.Products.Count + 1;
+            Repository.CreateProduct(model);
+            return RedirectToAction("Index");
+        }
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+        return View(model);
+       
     }
 
     

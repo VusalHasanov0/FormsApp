@@ -28,3 +28,4 @@ C:\Users\hesen\OneDrive\Masaüstü\aspnetcore-dersleri\FormsApp\obj\Debug\net8.0
 C:\Users\hesen\OneDrive\Masaüstü\aspnetcore-dersleri\FormsApp\obj\Debug\net8.0\FormsApp.pdb
 C:\Users\hesen\OneDrive\Masaüstü\aspnetcore-dersleri\FormsApp\obj\Debug\net8.0\FormsApp.genruntimeconfig.cache
 C:\Users\hesen\OneDrive\Masaüstü\aspnetcore-dersleri\FormsApp\obj\Debug\net8.0\ref\FormsApp.dll
+C:\Users\hesen\OneDrive\Masaüstü\aspnetcore-dersleri\FormsApp\obj\Debug\net8.0\FormsApp.sourcelink.json

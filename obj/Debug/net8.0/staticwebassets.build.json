@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZdPV03gwVPwG6qqND+9qTqR+aQYqDlV6Pk+oKq6S0YA=",
+  "Hash": "n98RYjamfkdUJZrT0HNHWDCisC+SIMVe0LZAZkjXQOE=",
   "Source": "FormsApp",
   "BasePath": "_content/FormsApp",
   "Mode": "Default",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\689b40b9-ba20-438a-b2ed-f614a55353fe.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\hesen\\OneDrive\\Masaüstü\\aspnetcore-dersleri\\FormsApp\\wwwroot\\img\\a89dd02b-f7d1-47e9-a1b6-4222c7ad6ea9.jpg",
+      "SourceId": "FormsApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hesen\\OneDrive\\Masaüstü\\aspnetcore-dersleri\\FormsApp\\wwwroot\\",
+      "BasePath": "_content/FormsApp",
+      "RelativePath": "img/a89dd02b-f7d1-47e9-a1b6-4222c7ad6ea9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\a89dd02b-f7d1-47e9-a1b6-4222c7ad6ea9.jpg"
     },
     {
       "Identity": "C:\\Users\\hesen\\OneDrive\\Masaüstü\\aspnetcore-dersleri\\FormsApp\\wwwroot\\img\\ba9f7c7e-06bf-4294-ac78-6a94944e6459.jpg",
